@@ -1,0 +1,75 @@
+{% schema %}
+{
+  "name": "Notification Bar",
+  "target": "body",
+  "javascript": "notification-bar.js",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "message",
+      "label": "Bar Message",
+      "default": "<h5><strong>\ud83d\udd25 Big Sale Today</strong> \u2013 Don\u2019t Miss Out!</h5>"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FF0000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_close",
+      "label": "Enable Close Button",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "dismiss_rule",
+      "label": "Hide After Closing",
+      "default": "day",
+      "options": [
+        {
+          "label": "Once a Day",
+          "value": "day"
+        },
+        {
+          "label": "Once a Month",
+          "value": "month"
+        },
+        {
+          "label": "Once Forever",
+          "value": "forever"
+        },
+        {
+          "label": "Every Visit",
+          "value": "every"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "close_icon_color",
+      "label": "Close Icon Color",
+      "default": "#ffffff"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+window.notificationBarSettings = {
+  message: {{ block.settings.message | json }},
+  background_color: {{ block.settings.background_color | json }},
+  text_color: {{ block.settings.text_color | json }},
+  enable_close: {{ block.settings.enable_close | json }},
+  dismiss_rule: {{ block.settings.dismiss_rule | json }},
+  close_icon_color: {{ block.settings.close_icon_color | json }}
+};
+console.log("Settings:", window.notificationBarSettings);
+</script>
