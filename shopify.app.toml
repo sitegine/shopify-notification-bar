@@ -3,7 +3,7 @@
 client_id = "abfdd801293621c44deee52a2dd640fa"
 name = "Top Notification Bar"
 handle = "top-notification-bar"
-application_url = "https://racial-rpm-peers-phrases.trycloudflare.com"
+application_url = "https://system-magic-mass-receives.trycloudflare.com"
 embedded = true
 
 [build]
@@ -27,9 +27,9 @@ scopes = "read_themes,write_themes"
 
 [auth]
 redirect_urls = [
-  "https://racial-rpm-peers-phrases.trycloudflare.com/auth/callback",
-  "https://racial-rpm-peers-phrases.trycloudflare.com/auth/shopify/callback",
-  "https://racial-rpm-peers-phrases.trycloudflare.com/api/auth/callback"
+  "https://system-magic-mass-receives.trycloudflare.com/auth/callback",
+  "https://system-magic-mass-receives.trycloudflare.com/auth/shopify/callback",
+  "https://system-magic-mass-receives.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
